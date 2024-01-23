@@ -10,8 +10,8 @@ import SwiftUI
 struct UnsplashPhoto: Codable, Identifiable {
     let id: String
     let slug: String
-    let author: User
-    let url: UnsplashPhotoUrls
+    let user: User
+    let urls: UnsplashPhotoUrls
 }
 
 struct User: Codable {

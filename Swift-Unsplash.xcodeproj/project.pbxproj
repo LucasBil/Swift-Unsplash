@@ -14,6 +14,8 @@
 		3BD081D52B6002F8001D7412 /* UnsplashImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD081D42B6002F8001D7412 /* UnsplashImage.swift */; };
 		3BD081D72B600A52001D7412 /* PListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD081D62B600A52001D7412 /* PListManager.swift */; };
 		3BD081DB2B601103001D7412 /* environment.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3BD081DA2B601103001D7412 /* environment.plist */; };
+		3BD081DD2B6019C2001D7412 /* UnsplashAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD081DC2B6019C2001D7412 /* UnsplashAPI.swift */; };
+		3BD081DF2B601E5D001D7412 /* FeedState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD081DE2B601E5D001D7412 /* FeedState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		3BD081D42B6002F8001D7412 /* UnsplashImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashImage.swift; sourceTree = "<group>"; };
 		3BD081D62B600A52001D7412 /* PListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PListManager.swift; sourceTree = "<group>"; };
 		3BD081DA2B601103001D7412 /* environment.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = environment.plist; sourceTree = "<group>"; };
+		3BD081DC2B6019C2001D7412 /* UnsplashAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashAPI.swift; sourceTree = "<group>"; };
+		3BD081DE2B601E5D001D7412 /* FeedState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				3BD081CB2B5FEAF3001D7412 /* Preview Content */,
 				3BD081D42B6002F8001D7412 /* UnsplashImage.swift */,
 				3BD081D62B600A52001D7412 /* PListManager.swift */,
+				3BD081DC2B6019C2001D7412 /* UnsplashAPI.swift */,
+				3BD081DE2B601E5D001D7412 /* FeedState.swift */,
 			);
 			path = "Swift-Unsplash";
 			sourceTree = "<group>";
@@ -150,7 +156,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BD081D72B600A52001D7412 /* PListManager.swift in Sources */,
+				3BD081DD2B6019C2001D7412 /* UnsplashAPI.swift in Sources */,
 				3BD081D52B6002F8001D7412 /* UnsplashImage.swift in Sources */,
+				3BD081DF2B601E5D001D7412 /* FeedState.swift in Sources */,
 				3BD081C82B5FEAF2001D7412 /* ContentView.swift in Sources */,
 				3BD081C62B5FEAF2001D7412 /* Swift_UnsplashApp.swift in Sources */,
 			);
