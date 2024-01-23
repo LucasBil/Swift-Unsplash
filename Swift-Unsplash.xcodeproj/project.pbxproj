@@ -13,7 +13,7 @@
 		3BD081CD2B5FEAF3001D7412 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BD081CC2B5FEAF3001D7412 /* Preview Assets.xcassets */; };
 		3BD081D52B6002F8001D7412 /* UnsplashImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD081D42B6002F8001D7412 /* UnsplashImage.swift */; };
 		3BD081D72B600A52001D7412 /* PListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD081D62B600A52001D7412 /* PListManager.swift */; };
-		3BD081D92B600AD2001D7412 /* environment.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3BD081D82B600AD2001D7412 /* environment.plist */; };
+		3BD081DB2B601103001D7412 /* environment.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3BD081DA2B601103001D7412 /* environment.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		3BD081D32B5FF4FE001D7412 /* Answer.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Answer.md; sourceTree = "<group>"; };
 		3BD081D42B6002F8001D7412 /* UnsplashImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashImage.swift; sourceTree = "<group>"; };
 		3BD081D62B600A52001D7412 /* PListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PListManager.swift; sourceTree = "<group>"; };
-		3BD081D82B600AD2001D7412 /* environment.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = environment.plist; sourceTree = "<group>"; };
+		3BD081DA2B601103001D7412 /* environment.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = environment.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +42,7 @@
 		3BD081B92B5FEAF2001D7412 = {
 			isa = PBXGroup;
 			children = (
-				3BD081D82B600AD2001D7412 /* environment.plist */,
+				3BD081DA2B601103001D7412 /* environment.plist */,
 				3BD081D32B5FF4FE001D7412 /* Answer.md */,
 				3BD081C42B5FEAF2001D7412 /* Swift-Unsplash */,
 				3BD081C32B5FEAF2001D7412 /* Products */,
@@ -138,7 +138,7 @@
 			files = (
 				3BD081CD2B5FEAF3001D7412 /* Preview Assets.xcassets in Resources */,
 				3BD081CA2B5FEAF3001D7412 /* Assets.xcassets in Resources */,
-				3BD081D92B600AD2001D7412 /* environment.plist in Resources */,
+				3BD081DB2B601103001D7412 /* environment.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
