@@ -24,6 +24,7 @@ extension Image {
 
 struct ContentView: View {
     @StateObject var feedState : FeedState = FeedState()
+    @State var showTopicPhotosView = false
     
     var body: some View {
         NavigationStack {
@@ -32,16 +33,20 @@ struct ContentView: View {
                     Spacer().frame(width: 5)
                     if let topics = feedState.topics {
                         ForEach(topics, id: \.id){ topic in
-                            VStack{
-                                AsyncImage(url: URL(string: topic.cover_photo.urls.full)!){ image in
-                                    image
-                                        .centerCropped()
-                                        .clipShape(RoundedRectangle(cornerRadius: 12))
-                                } placeholder: {
-                                    ProgressView()
+                            NavigationLink{
+                                TopicPhotosView(topic: topic).environmentObject(feedState)
+                            } label: {
+                                VStack{
+                                    AsyncImage(url: URL(string: topic.cover_photo.urls.small)!){ image in
+                                        image
+                                            .centerCropped()
+                                            .clipShape(RoundedRectangle(cornerRadius: 12))
+                                    } placeholder: {
+                                        ProgressView()
+                                    }
+                                    .frame(width: 110, height: 70)
+                                    Text(topic.slug)
                                 }
-                                .frame(width: 110, height: 70)
-                                Text(topic.slug)
                             }
                         }
                     }
@@ -60,36 +65,7 @@ struct ContentView: View {
                 })
             }
             .frame(height: 140)
-            HStack{
-                Spacer()
-                ScrollView{
-                    LazyVGrid(columns: [GridItem(.flexible(minimum: 150)),GridItem(.flexible(minimum: 150))], spacing: 8, content: {
-                        if let images = feedState.homeFeed {
-                            ForEach(images, id: \.id) { image in
-                                AsyncImage(url: URL(string: image.urls.full)!){ image in
-                                    image
-                                        .centerCropped()
-                                        .clipShape(RoundedRectangle(cornerRadius: 12))
-                                } placeholder: {
-                                    ProgressView()
-                                }
-                                .frame(height:150)
-                            }
-                        }
-                        else{
-                            ForEach(1...12, id: \.self) { _ in
-                                Rectangle()
-                                    .fill(.gray)
-                                    .clipShape(RoundedRectangle(cornerRadius: 12))
-                                    .frame(height:150)
-                            }
-                        }
-                    })
-                }
-                .clipShape(RoundedRectangle(cornerRadius: 12))
-                Spacer()
-            }
-            .navigationTitle("Feed")
+            UnsplashPhotoGrid(title: "Feed", unsplashPhotos: feedState.homeFeed)
             Button(action: {
                 Task {
                     await feedState.fetchTopics()

@@ -8,11 +8,22 @@
 import SwiftUI
 
 struct TopicPhotosView: View {
+    let topic : UnsplashTopic
+    @EnvironmentObject var feedState : FeedState
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        UnsplashPhotoGrid(title: "\(topic.slug)", unsplashPhotos: feedState.topicPhotos)
+        Button(action: {
+            Task {
+                await feedState.fetchTopicPhoto(topic: topic)
+            }
+        }) {
+            Text("Load Topic Pictures")
+        }
     }
 }
 
 #Preview {
-    TopicPhotosView()
+    TopicPhotosView(topic: UnsplashTopic(id: "topic",slug: "slug_topic",cover_photo: UnsplashPhoto(id: "img",slug: "slug_image",user: User(name: "hop"),urls: UnsplashPhotoUrls(raw: "raw",full: "full",regular: "regular",small: "small",thumb: "thumb")))
+    )
 }

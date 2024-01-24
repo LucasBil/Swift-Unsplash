@@ -26,6 +26,20 @@ struct UnsplashPhotoUrls: Codable {
     let thumb: String
 }
 
+enum ScreenResolution : String, CaseIterable {
+    case small = "small"
+    case regular = "regular"
+    case full = "full"
+    
+    func getPhotoResolution(photo : UnsplashPhoto) -> String {
+        switch self {
+            case .small : return photo.urls.small
+            case .regular : return photo.urls.regular
+            case .full : return photo.urls.full
+        }
+    }
+}
+
 
 let defaultUnsplashImage = """
 {
